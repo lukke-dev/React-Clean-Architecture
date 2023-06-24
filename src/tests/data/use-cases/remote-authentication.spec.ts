@@ -1,12 +1,12 @@
-import { HttpPostClient } from '../../../data/interfaces'
+import { HttpPostClient, HttpPostClientParams } from '../../../data/interfaces'
 import { RemoteAuthentication } from '../../../data/use-cases'
 import { faker } from '@faker-js/faker'
 
 class HttpPostClientSpy implements HttpPostClient {
   url?: string
 
-  async post(url: string): Promise<void> {
-    this.url = url
+  async post(params: HttpPostClientParams): Promise<void> {
+    this.url = params.url
     return Promise.resolve()
   }
 }
