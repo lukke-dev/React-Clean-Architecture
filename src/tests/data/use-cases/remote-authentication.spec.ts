@@ -1,7 +1,7 @@
-import { HttpPostClient, HttpPostClientParams } from '../../../data/interfaces'
-import { RemoteAuthentication } from '../../../data/use-cases'
+import { HttpPostClient, HttpPostClientParams } from '@/data/interfaces'
+import { RemoteAuthentication } from '@/data/use-cases'
 import { faker } from '@faker-js/faker'
-import { mockAuthentication } from '../../domain/mocks'
+import { mockAuthentication } from '@/tests/domain/mocks'
 
 class HttpPostClientSpy implements HttpPostClient {
   url?: string
